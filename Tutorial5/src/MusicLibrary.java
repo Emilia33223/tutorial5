@@ -1,4 +1,4 @@
-import javax.swing.plaf.synth.SynthOptionPaneUI;
+
 import java.util.ArrayList;
 
 public class MusicLibrary {
@@ -70,7 +70,7 @@ public class MusicLibrary {
         }
     }
 
-    public void displayPlaylists() {
+    public void displayPlaylists(String favorites) {
         for (Playlist playlist : playlists) {
             System.out.println(playlist.getName());
 
@@ -97,5 +97,8 @@ public class MusicLibrary {
 
     public String getOwner() {
         return owner;
+    }
+
+    public void createPlaylist(String favorites) {
     }
 }
