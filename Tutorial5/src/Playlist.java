@@ -1,17 +1,6 @@
 import java.util.ArrayList;
 
 public class Playlist {
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public ArrayList<String> getTracks() {
-        return tracks;
-    }
-
-    public void setTracks(ArrayList<String> tracks) {
-        this.tracks = tracks;
-    }
 
     private String name;
     private ArrayList<String> tracks;
@@ -33,7 +22,6 @@ public class Playlist {
 
         }
     }
-
     public void removeTrack(String track) {
         boolean isRemoved = this.tracks.remove(track);
         if (!isRemoved) {
@@ -41,6 +29,42 @@ public class Playlist {
         }
 
     }
+
+    public void displayPlaylist(){
+        System.out.println("Playlist " + this.name);
+        if (tracks.isEmpty()) {
+            System.out.println("No tracks");
+
+        } else {
+            for (String track : tracks) {
+                System.out.println("    " + track);
+            }
+        }
+    }
+
+
+
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public ArrayList<String> getTracks() {
+        return tracks;
+    }
+
+    public void setTracks(ArrayList<String> tracks) {
+        this.tracks = tracks;
+    }
+
+
+
+
+
+
+
+
+
 
     public void display(){
         System.out.println("Playlist " + this.name + " has " + this.tracks.size() + " tracks");
